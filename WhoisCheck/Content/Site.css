@@ -1,0 +1,41 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 500px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+.dff-form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.dff-label {
+    width: 100%;
+    text-align: left !important;
+    margin-bottom: 10px;
+}
+
+.dff-inputwrap {
+    padding: 0;
+    width: 100%;
+}
+
+.dff-input {
+    margin: 10px 0;
+    width: 85% !important;
+    float: left;
+}
+
+.dff-submit {
+    margin: 10px 0;
+    float: right;
+    width: 15%;
+}

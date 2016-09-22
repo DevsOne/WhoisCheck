@@ -1,0 +1,23 @@
+﻿@model WhoisCheck.Models.DomainViewModels
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("CheckDomain", "Home", FormMethod.Post, new { @class = "form-horizontal dff-form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group dff-group">
+        @Html.LabelFor(m => m.DomainName, new { @class = "control-label dff-label" })
+        <div class="dff-inputwrap">
+            @Html.TextBoxFor(m => m.DomainName, new { @class = "form-control dff-input" })
+        </div>
+        <input type="submit" class="btn btn-default dff-submit" value="&#128270;" />
+    </div>
+}
+<hr />
+@if (Model != null)
+{
+    @Html.Raw(Model.DomainDetails);
+}

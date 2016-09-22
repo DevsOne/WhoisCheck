@@ -1,0 +1,34 @@
+﻿@using WhoisCheck.Models
+@{
+    ViewBag.Title = "TLD Server List";
+    var num = 0;
+}
+
+
+<table class="table">
+    <tr>
+        <td><b>#</b></td>
+        <td><b>TLD</b></td>
+        <td><b>ASCII</b></td>
+        <td><b>WhoisServer</b></td>
+    </tr>
+    @foreach (var tld in TLDs.TLDList())
+    {
+        num++;
+        <tr>
+            <td>@num</td>
+            @if (tld.WhoisServer != string.Empty)
+            {
+                <td>@tld.TldName</td>
+                <td>@tld.ASCIIcode</td>
+                <td>@tld.WhoisServer</td>
+            }
+            else
+            {
+                <td style="color:red">@tld.TldName</td>
+                <td style="color:red">@tld.ASCIIcode</td>
+                <td><i style="color:red">Unavailable</i></td>
+            }
+        </tr>
+    }
+</table>
